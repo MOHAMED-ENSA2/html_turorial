@@ -7,6 +7,8 @@
     --paragraph-color : #aaa6b7;
 }
 
+/* typography */
+
 html{
     font-size: 62.5%;
 }
@@ -45,5 +47,31 @@ p{
     }
     h3{
         font-size: 2.4rem;
+    }
+}
+
+/* links */
+
+a{
+    text-decoration: none;
+}
+.links{
+    color: var(--accent-color);
+    font-size: 2rem;
+    font-weight: bold;
+}
+.links::after{
+    content: "-->";
+    margin-left: 5px;
+    transition: margin 0.2s;
+}
+
+.links:hover::after{
+    margin-left: 10px;
+}
+
+@media screen and (min-width : 1024px) {
+    .links{
+        font-size: 1.5rem;
     }
 }
